@@ -28,6 +28,7 @@ bot.command("start", "Starts the bot",false, (args, message) => {
       message.reply(
 "<b>Bot developed by @GeneralApathy</b>\n" +
 "Feel free to contact me for any questions about the bot.\n"+
+"<a href='https://github.com/GeneralApathy/csgoskins-bot'> Source code </a>\n" +
 "\n Enjoy!"
 
 , {parse_mode: "HTML"});

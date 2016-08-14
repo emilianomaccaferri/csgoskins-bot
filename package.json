@@ -1,0 +1,34 @@
+{
+  "name": "csgoskins-bot",
+  "version": "1.0.0",
+  "description": "This Telegram bot fetches data from the CSGO market",
+  "main": "main.js",
+  "dependencies": {
+    "nodeogram": "^0.0.3",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeneralApathy/csgoskins-bot"
+  },
+  "keywords": [
+    "Telegram",
+    "Counter-Strike:",
+    "Global",
+    "Offensive",
+    "CS:GO",
+    "Items",
+    "Steam",
+    "Market"
+  ],
+  "author": "Emiliano Maccaferri (GeneralApathy)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/GeneralApathy/csgoskins-bot/issues"
+  },
+  "homepage": "https://github.com/GeneralApathy/csgoskins-bot"
+}

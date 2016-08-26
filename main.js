@@ -17,13 +17,59 @@ bot.init();
 
 console.log("+ Bot started.");
 
-bot.command("start", "Starts the bot",false, (args, message) => {
+bot.on('message', message => {
+
+  var triggeringWords = [
+
+    "russi",
+    "ruski",
+    "vodka",
+    "putin",
+    "russe",
+    "russian",
+    "russia",
+    "pitar",
+    "blyat",
+    "mathematics with pitar blyat",
+    "csgo",
+    "p90",
+    "kala",
+    "kalashnikov",
+    "drop awp",
+    "drop pls",
+    "drop",
+    "idiot"
+
+  ];
+
+  if (new RegExp(triggeringWords.join("|")).test(message.text.toLowerCase())) {
+
+    var resp = [
+
+      "Сука Блять",
+      "https://www.youtube.com/watch?v=lZCrvBomVck",
+      "rush b no stop pls",
+      "fuckin idiot blyat",
+      "kurwa",
+      "without vodka no fun"
+
+    ];
+
+    var key = Math.round(Math.random() * resp.length-1);
+    message.reply(resp[key]);
+
+  }
+
+
+});
+
+bot.command("start", "Starts the bot", false, (args, message) => {
 
       message.reply("<b>== Welcome to CSGOSkinsBot ==</b>\nI rewrote this bot in NodeJS, so it can be faster.\nI'm currently using <a href='https://github.com/ALCC01/nodeogram'>nodeogram</a> as Telegram NodeJS library, but I will write my own soon!\n\n<b>Available commands:</b>\n/weapon => Fetches a weapon\n/knife => Fetches a knife\n/case => Fetches a case\n\n Enjoy!", {parse_mode: "HTML"});
 
     });
 
-    bot.command("info", "Informations about the bot", (args, message) => {
+    bot.command("info", "Informations about the bot", false, (args, message) => {
 
       message.reply(
 "<b>Bot developed by @GeneralApathy</b>\n" +
